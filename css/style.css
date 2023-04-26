@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.contenedor {
+  display: flex;
+  width: 90vw;
+}
+
+.contenedor div:first-child {
+  background-image: url("../img/Obelisco.png");
+}
+.contenedor div:nth-child(2) {
+  background-image: url("../img/Cataratas.png");
+}
+.contenedor div:nth-child(3) {
+  background-image: url("../img/Cerro-7-colores.png");
+}
+
+.imagen {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.75 ease-in;
+}
+
+.imagen h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.cerro {
+  color: red;
+}
+
+.imagen.activo {
+  flex: 1;
+}
+.imagen.activo h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 480px) {
+  .contenedor {
+    width: 100vh;
+  }
+}
